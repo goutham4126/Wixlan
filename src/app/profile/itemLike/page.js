@@ -7,12 +7,23 @@ function Like() {
   const { data: session } = useSession();
   const [data, setData] = useState([]);
 
-  const likedItems = async () => {
-    if (!session) return;
-    const response = await fetch("/api/like_item");
-    const items = await response.json();
-    setData(items);
-  };
+    const likedItems = async () => {
+      if (!session) return;
+      const response = await fetch("/api/like_item");
+      const items = await response.json();
+      setData(items);
+    };
+
+    const handleDelete = async (itemId) => {
+      try {
+        await fetch(`/api/LikedDelete/${itemId}`, {
+          method: 'DELETE',
+        }); 
+        setData(prevData => prevData.filter(item => item._id !== itemId));
+      } catch (error) {
+        console.error('Error deleting item:', error);
+      }
+    };
 
   
   useEffect(() => {
@@ -22,7 +33,6 @@ function Like() {
   }, [session]);
 
  
-  
 
   return (
     <div className="flex flex-wrap">
@@ -34,7 +44,7 @@ function Like() {
             <p className="text-sm font-semibold text-gray-600 mb-1">{item.brand}</p>
             <p className="text-sm font-semibold text-gray-600 mb-1"><FaIndianRupeeSign className="inline"/> {item.price}</p>
             <p className="text-sm font-semibold text-gray-600 mb-1 overflow-hidden overflow-ellipsis whitespace-nowrap">{item.seller_address}</p>
-            <div className="flex justify-between items-center mt-3">
+            <div className="flex justify-around items-center mt-3">
                 <Link href={{
                   pathname:'/detailedView',
                   query:{
@@ -51,11 +61,12 @@ function Like() {
                     Seller_id:item.seller_id,
                   }
                 }}
-                className="bg-blue-500 hover:bg-blue-700 m-auto text-white font-semibold p-3 mb-1 text-sm"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-semibold p-3 mb-1 text-sm"
                 style={{borderRadius:10}}
                 >
                   Details
                 </Link>
+                <button onClick={()=>handleDelete(item._id)} className="font-semibold bg-red-500 text-white p-2.5" style={{borderRadius:10}}>Delete</button>
               </div>
           </div>
         </div>

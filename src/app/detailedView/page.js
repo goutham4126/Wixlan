@@ -55,6 +55,7 @@ const Page = ({ searchParams }) => {
                     <div className="mt-4">
                         <div className="font-semibold text-gray-800">{searchParams.Seller_name}</div>
                         <div className="font-semibold text-neutral-400 text-sm">{searchParams.Seller_address}</div>
+                        <div className="text-gray-600 text-sm mt-2 font-semibold">{searchParams.Seller_phone}</div>
                     </div>
                     <div>
                         <button onClick={()=>Liked()} className="mt-4 p-2 bg-cyan-500 text-white font-semibold" style={{borderRadius:5}}><FaShoppingCart className="inline mr-2 mb-0.5"/>Add to cart</button>

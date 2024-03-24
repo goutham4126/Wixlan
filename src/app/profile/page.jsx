@@ -22,7 +22,7 @@ function Profile() {
         <p className="mt-2 mb-3">{session?.user.email}</p>
       </div>
       <hr/>
-      <h1 className="font-bold mt-3">Liked items</h1>
+      <h1 className="font-bold mt-3">Liked items:</h1>
       <Like/>
       <h1 className="font-bold mt-3">My Selling items:</h1>
       <Sell/>
