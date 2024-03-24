@@ -42,7 +42,7 @@ function Transport() {
       <form
         className="mx-auto bg-orange-100 rounded-md p-4 md:w-3/4 lg:w-2/3"
         onSubmit={handleSubmit(trans)}>
-        <h1 className="text-xl mb-4 font-bold text-blue-900">Sender's Information:</h1>
+        <h1 className="text-xl mb-4 font-bold text-blue-900">Sender&apos;s Information:</h1>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="firstname" className="block text-md font-semibold leading-6 text-gray-900">First name</label>
@@ -96,7 +96,7 @@ function Transport() {
 
         <hr className="mt-10 mb-6 border-1 border-slate-300"/>
 
-        <h1 className="text-xl mb-4 font-bold text-blue-900">Receiver's Information :</h1>
+        <h1 className="text-xl mb-4 font-bold text-blue-900">Receiver&apos;s Information :</h1>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label htmlFor="receiver_name" className="block text-md font-semibold leading-6 text-gray-900">Full name</label>

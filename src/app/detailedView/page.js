@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const Page = ({ searchParams }) => {
     const [userLocation, setUserLocation] = useState(null);
@@ -46,7 +47,7 @@ const Page = ({ searchParams }) => {
     return (
         <div className="bg-orange-100 mt-[-11px]">
             <div className="m-auto items-center p-3">
-                <img src={searchParams.Photo} alt="Product Image" className="w-48 block border-2 border-slate-400" />
+                <Image src={searchParams.Photo} alt="Product Image" className="block border-2 border-slate-400" width={200} height={200} />
                 <div className="p-3">
                     <div className="font-semibold text-gray-800">{searchParams.Category}</div>
                     <div className="font-semibold text-gray-600 text-sm">{searchParams.Brand}</div>

@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import { MdDeleteOutline } from "react-icons/md";
 import { AiOutlineEdit } from "react-icons/ai";
 import EditModal from "@/components/EditForm/EditForm";
-
+import Image from "next/image";
 function Sell() {
   const { data: session } = useSession();
 
@@ -76,7 +76,7 @@ function Sell() {
               boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",
             }}
           >
-            <img src={item.photo} loading="lazy" className="m-auto mb-3 h-[150px] rounded-md" alt="" />
+            <Image src={item.photo} loading="lazy" className="m-auto mb-3 rounded-md" width={200} height={100} alt="" />
             <p className="text-md text-blue-950 font-semibold mb-1">Category: {item.Category}</p>
             <p className="text-sm font-semibold text-gray-600 mb-1">{item.brand}</p>
             <p className="text-sm font-semibold text-gray-600 mb-1">

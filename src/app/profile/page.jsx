@@ -4,13 +4,13 @@ import { useSession } from "next-auth/react";
 import Sell from "./itemSell/page";
 import Like from "./itemLike/page";
 import Transport from "./itemTransport/page";
-
+import Image from "next/image";
 function Profile() {
   const { data: session } = useSession();
   return (
     <div className="m-3">
       <div className="text-center font-semibold text-neutral-500">
-        <img
+        <Image
           src={session?.user.image}
           loading="lazy"
           alt="#"

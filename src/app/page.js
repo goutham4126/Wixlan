@@ -1,8 +1,7 @@
 "use client"
 import Link from "next/link";
 import { signIn, useSession } from "next-auth/react";
-import Footer from "@/components/Footer/Footer";
-
+import Image from "next/image";
 export default function Home() {
   const handleSignIn = async () => {
     await signIn();
@@ -27,19 +26,19 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 m-5">
         <div className="p-4" style={{boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",borderRadius:10}}>
-          <img src="https://i.postimg.cc/yxDyHnkf/undraw-logistics-x4dc.png" alt="" className="block m-auto w-96 h-60"/>
+          <Image src="https://i.postimg.cc/yxDyHnkf/undraw-logistics-x4dc.png" alt="" className="block m-auto" width={200} height={300}/>
           <div>
             <p className="font-bold text-blue-950 text-center m-auto">Sell Your Items Hassle-Free</p>
             <p className="font-semibold text-neutral-400 text-center">List your items for sale effortlessly and reach potential buyers across the globe. </p>
           </div>
         </div>
         <div className="p-4" style={{boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",borderRadius:10}}>
-          <img src="https://i.postimg.cc/qMXxdtRH/undraw-Business-deal-re-up4u.png" alt="" className="block m-auto w-96 h-60"/>
+          <Image src="https://i.postimg.cc/qMXxdtRH/undraw-Business-deal-re-up4u.png" alt="" className="block m-auto" width={200} height={300}/>
           <p className="font-bold text-blue-950 text-center">Efficient Transport Solutions</p>
           <p className="font-semibold text-neutral-400 text-center">Our reliable transportation services ensure safe and timely delivery. </p>
         </div>
         <div className="p-4" style={{boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",borderRadius:10}}>
-          <img src="https://i.postimg.cc/6qh2FvhH/undraw-web-shopping-re-owap.png" alt="" className="block m-auto w-96 h-60"/>
+          <Image src="https://i.postimg.cc/6qh2FvhH/undraw-web-shopping-re-owap.png" alt="" className="block m-auto" width={200} height={300}/>
           <p className="font-bold text-blue-950 text-center">Track Your Shipment in Real-Time</p>
           <p className="font-semibold text-neutral-400 text-center">Stay informed every step of the way with our interactive map feature. </p>
         </div>
