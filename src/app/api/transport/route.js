@@ -1,5 +1,6 @@
 import { connectToDB } from "@/utils/database";
 import transport from "@/models/transportDetails";
+export const dynamic = "force-dynamic"
 
 
 export const GET=async(req,res)=>{
