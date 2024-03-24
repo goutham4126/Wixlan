@@ -39,7 +39,7 @@ function Buy(){
         }).map((item, index) => (
         <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-5">
           <div className="p-4" style={{boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px",borderRadius:10}}>
-            <Image src={item.photo} loading="lazy" className="m-auto mb-3" width={200} height={200} style={{borderRadius:5}} alt=""/>
+            <Image src={item.photo} loading="lazy" className="m-auto mb-3" width={200} height={100} style={{borderRadius:5}} alt=""/>
             <p className="text-md text-blue-950 font-semibold mb-1">Category: {item.Category}</p>
             <p className="text-sm font-semibold text-gray-600 mb-1">{item.brand}</p>
             <p className="text-sm font-semibold text-gray-600 mb-1"><FaIndianRupeeSign className="inline"/> {item.price}</p>

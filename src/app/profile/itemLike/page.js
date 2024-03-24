@@ -12,7 +12,8 @@ function Like() {
       if (!session) return;
       const response = await fetch("/api/like_item");
       const items = await response.json();
-      setData(items);
+      const userLikedItems = items.filter(item => item.seller_id!== session.user.id);
+      setData(userLikedItems);
     };
 
     const handleDelete = async (itemId) => {

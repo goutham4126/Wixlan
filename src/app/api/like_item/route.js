@@ -7,7 +7,7 @@ export const GET=async(req,res)=>{
         const items=await likedItems.find({});
         return new Response(JSON.stringify(items));
     }
-    catch(err)  
+    catch(err) 
     {
         return new Response("Internal server Error", { status: 500 });
     }

@@ -19,7 +19,7 @@ function Transport() {
     if (session) {
       fetchItemsToTransport();
     }
-  }, []);
+  }, [session]);
 
 
   return (
