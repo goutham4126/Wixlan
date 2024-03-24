@@ -7,6 +7,7 @@ import Search from "@/components/Search/Search";
 import WhatsAppButton from "@/share/Whatsapp";
 import Email from "@/share/Email";
 import Image from "next/image";
+export const dynamic = "force-dynamic"
 
 function Buy(){
   const [data, setData] = useState([]);

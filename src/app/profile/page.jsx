@@ -5,6 +5,8 @@ import Sell from "./itemSell/page";
 import Like from "./itemLike/page";
 import Transport from "./itemTransport/page";
 import Image from "next/image";
+export const dynamic = "force-dynamic"
+
 function Profile() {
   const { data: session } = useSession();
   return (

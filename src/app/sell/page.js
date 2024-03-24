@@ -3,6 +3,7 @@ import { MdCurrencyRupee } from "react-icons/md";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
+export const dynamic = "force-dynamic"
 
 function Sell() {
   const { register, handleSubmit } = useForm();

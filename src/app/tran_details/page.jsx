@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { useSession } from "next-auth/react";
+export const dynamic = "force-dynamic"
 
 function Transport() {
   const { register, handleSubmit } = useForm();

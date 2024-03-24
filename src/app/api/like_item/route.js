@@ -1,6 +1,5 @@
 import { connectToDB } from "@/utils/database";
 import likedItems from "@/models/likedItems";
-export const dynamic = "force-dynamic"
 
 export const GET=async(req,res)=>{
     try{

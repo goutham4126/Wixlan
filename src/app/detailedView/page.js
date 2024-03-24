@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-
+export const dynamic = "force-dynamic"
 const Page = ({ searchParams }) => {
     const [userLocation, setUserLocation] = useState(null);
     const [loading, setLoading] = useState(true);

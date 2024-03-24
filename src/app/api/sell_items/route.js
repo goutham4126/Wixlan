@@ -1,6 +1,5 @@
 import { connectToDB } from "@/utils/database";
 import itemsForSale from "@/models/sellItems";
-export const dynamic = "force-dynamic"
 
 export const GET=async(req,res)=>{
     try{
